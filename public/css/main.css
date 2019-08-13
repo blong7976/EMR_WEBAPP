@@ -18,8 +18,8 @@
     box-shadow: 0 1px 6px #ccc;
 }
 #Vm_header .mui-title{
-    right: .8rem;
-    left: .8rem;
+    right: 2rem;
+    left: 2rem;
     display: inline-block;
     overflow: hidden;
     width: auto;
@@ -108,10 +108,14 @@
     z-index: 20;
     width: .48rem;
     height: .48rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: .05rem;
+    padding-bottom: .02rem;
     margin: 0 auto;
     font-size: .4rem;
     position: relative;
     z-index: 20;
+}
+#Vm_footer .tab-item.mui-active .tab-icon,
+#Vm_footer .tab-item.mui-active .tab-label{
+   color: #007aff 
 }
