@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html,body{
+    max-width: 750px;
+    margin: 0 auto;
+}
 /* 全局样式 */
 #Vm_header{
     position: fixed;
@@ -118,4 +122,100 @@
 #Vm_footer .tab-item.mui-active .tab-icon,
 #Vm_footer .tab-item.mui-active .tab-label{
    color: #007aff 
+}
+
+
+/* Case-Details css */
+.Case-Details{
+    position: relative;
+    background: url(../img/case-top-bgImg.png) no-repeat center top;
+    background-color: #fff;
+    background-size: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.Case-Details .body{
+    margin: .3rem .4rem;
+    background: #fff;
+    border-radius: .1rem;
+    box-shadow: 0px 0px 30px 0px rgba(52, 52, 52, 0.13);
+    padding: .4rem;
+    box-sizing: border-box;
+}
+.Case-Details .body .info{
+    position: relative;
+    overflow: hidden;
+}
+.Case-Details .body .info .lt{
+    width: 1.83rem;
+    height: 2.28rem;
+    overflow: hidden;
+    border-radius: .1rem;
+    background: #f5f5f5;
+    float: left;
+}  
+.Case-Details .body .info .lt img{
+    width: 100%;
+    height: 100%;
+}
+.Case-Details .body .info .lr{
+    margin-left: 2.4rem;
+}
+.mui-cell{display: flex;box-sizing: border-box;font-size: .26rem;color: #666;padding: .088rem 0;overflow: hidden;line-height: .4rem}
+.mui-laber{
+    width: 1.5rem;
+    margin-right: .18rem;
+    text-align: justify;
+    text-align-last: justify;
+}
+.mui-body{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.Case-Details .body .list{
+    margin-top: .15rem;
+}
+.grid{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.grid-item{
+    position: relative;
+    box-sizing: border-box;
+}
+.Case-Details .body .grid-item{
+    width: 20%;
+}
+.Case-Details .body .grid-item .grid-item__icon{
+    width: .78rem;
+    height: .78rem;
+    margin: .25rem auto;
+}
+.Case-Details .body .grid-item .grid-item__icon img{
+    width: 100%;height: 100%;vertical-align: top;
+}
+.Case-Details .body .grid-item .grid-item__text{
+    font-size: .26rem;
+    color: #666;
+    text-align: center;
+}
+.Case-Details .foote{
+    padding: .9rem .2rem;
+}
+.Vm_button{
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .3rem;
+    text-align: center;
+    width: 100%;
+    background: #00a7c1;
+    color: #fff;
+    border-radius: .1rem;
 }
