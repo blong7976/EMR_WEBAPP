@@ -193,7 +193,46 @@ button,
 select { /* 1 */
   text-transform: none;
 }
-
+html,body{-webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size:12px;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, abbr, address, big, em, img, q, small, strike, strong, pre,
+sub, sup, tt, var, i, dl, dt, dd, ol, ul, li, form, fieldset, label, table, caption, tbody, thead, tfoot, tr, th, td, article,
+aside, canvas, details, figure, figcaption, header, footer, hgroup, menu, nav, output, section, time, mark, audio,
+video, input, select, button, textarea {margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: '微软雅黑',Arial;
+    font-weight: inherit;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+address,cite,dfn,em,var,i{font-style:normal;font-weight:400}
+dfn{font-family:Arial}
+ul,ol{list-style:none}
+a{color:#000;text-decoration:none}
+a:hover{-webkit-transition:color .2s linear;-moz-transition:color .2s linear;-ms-transition:color .2s linear;-o-transition:color .2s linear;transition:color .2s linear}
+fieldset,img,button,input{border:0}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+input{-webkit-appearance:none;border-radius:0}
+:focus{outline:0}
+body,html{ width:100%; height:100%;}
+/* input默认提示文字颜色 */
+/* WebKit browsers */
+::-webkit-input-placeholder {
+	color: #bdbdbd;}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+	color: #bdbdbd;
+	opacity: 1;}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+	color: #bdbdbd;
+	opacity: 1;}
+/* Internet Explorer 10+ */
+:-ms-input-placeholder {
+	color: #bdbdbd;}
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */

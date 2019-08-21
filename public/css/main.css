@@ -2,6 +2,10 @@
 html,body{
     max-width: 750px;
     margin: 0 auto;
+	
+}
+*{
+	cursor: url('../image/menghuan.ico'), auto;
 }
 /* 全局样式 */
 #Vm_header{
@@ -218,4 +222,103 @@ html,body{
     background: #00a7c1;
     color: #fff;
     border-radius: .1rem;
+}
+
+/* Message css */
+#message{padding: .3rem;padding-bottom: 1.2rem;}
+#message .reply, #message .ask {
+    padding-bottom: .7rem;
+}
+#message .time {
+    font-size: .24rem;
+    color: #999;
+    margin-bottom: .3rem;
+    text-align: center;
+}
+#message .msg {
+    position: relative;
+}
+#message .msg>img {
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    float: left;
+}
+#message .reply .msg .name {
+    position: absolute;
+    font-size: .24rem;
+    color: #999;
+    top: -.1rem;
+    left: .9rem;
+}
+#message .msg>p {
+    float: left;
+    margin: 0 .4rem;
+    padding: .25rem;
+    background: #fff;
+    font-size: .3rem;
+    position: relative;
+    border-radius: .2rem;
+    max-width: 5rem;
+    min-height: .8rem;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+#message .reply .msg>p {
+    top: .3rem;
+}
+.ask .msg img, .ask .msg p, .ask .msg {
+    float: right !important;
+}
+.reply:after, .ask:after, .msg:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#Messagefooter{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    background-color: #dfdfdf;
+    border-top: 1px solid #ddd;
+}
+#Messagefooter .send_wrap {
+    display: -webkit-flex;
+    display: flex;
+    padding: 0.2rem;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+#Messagefooter .send_wrap .send_box {
+    position: relative;
+    display: block;
+    height: auto;
+    padding: 0.2rem 0;
+    margin: 0 0.2rem;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 0.3rem;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#Messagefooter .send_wrap .send_input {
+    width: 100%;
+    padding: 0 0.2rem;
+    color: #333;
+    min-height: 0.4rem;
+    max-height: 1.6rem;
+    line-height: 0.4rem;
+    overflow: auto;
+}
+#sendMessage {
+    width: 0.8rem;
+    height: 0.8rem;
+    font-size: 0;
+    background: url(../image/send_sub.png) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
 }

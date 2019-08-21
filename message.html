@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/iconfont/iconfont.css">
+    <script src="public/js/rem.js"></script>
+    <script src="http://ginnieapp.natapp1.cc/JS/jquery-1.9.1.min.js"></script>
+
+    <title>EMR</title>
+    <style>
+      body{background-color: #efeff4}
+    </style>
+</head>
+<body>
+  <div id="message">
+    
+    <div class="reply">
+      <div class="time">05/22 06:30</div>
+      <div class="msg">
+        <img src="./public/image/touxiang.png" alt="">
+        <span class="name">斜杠青年</span>
+        <p>
+          <i class="msg_input"></i>
+          你好在不在呀，妹子！
+        </p>
+      </div>
+    </div>
+  
+
+    <div class="ask">
+      <div class="time">05/22 06:30</div>
+      <div class="msg">
+        <img src="./public/image/touxiangm.png" alt="">
+        <p>
+          <i clas="msg_input"></i>
+          你好你好你好
+        </p>
+      </div>
+    </div>
+
+    <div class="reply">
+        <!-- <div class="time">05/22 06:30</div> -->
+        <div class="msg">
+          <img src="./public/image/touxiang.png" alt="">
+          <span class="name">斜杠青年</span>
+          <p>
+            <i class="msg_input"></i>
+            好久没联系了！
+          </p>
+        </div>
+      </div>
+
+  </div>  
+  <div id="Messagefooter">
+    <div class="send_wrap">
+       <div class="send_box">
+          <div class="send_input" contenteditable="true" id="textarea" placeholder="输入你想说的话"></div>
+       </div>
+       <button class="send_btn" id="sendMessage">发送</button>
+    </div>
+  </div>
+
+  <script>
+      function getQueryString(name) {
+          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+          var r = decodeURI(window.location.search).substr(1).match(reg);
+          if (r != null)
+              return r[2];
+          return null;
+      }
+      if (getQueryString("validataContorl") === "validata") {
+          $("body").one("focus", "input,select,textarea", function () {
+              $(this).data('initData', $(this).val());
+          });
+      }
+  </script>
+</body>
+</html>
