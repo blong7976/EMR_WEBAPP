@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/iconfont/iconfont.css">
     <script src="public/js/rem.js"></script>
-    <script src="http://ginnieapp.natapp1.cc/JS/jquery-1.9.1.min.js"></script>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 
     <title>EMR</title>
     <style>
-      body{background-color: #efeff4}
+      body{background-color: #efeff4;}
     </style>
 </head>
 <body>
@@ -77,6 +77,10 @@
               $(this).data('initData', $(this).val());
           });
       }
+      $("#sendMessage").on('click',function(){
+        var addItem=$("#textarea").html();
+        console.log(addItem)
+      })
   </script>
 </body>
 </html>
