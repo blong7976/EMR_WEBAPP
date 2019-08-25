@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/iconfont/iconfont.css">
+    <script src="public/js/rem.js"></script>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <title>hengban-入组采集</title>
+    <style>
+    </style>
+</head>
+<body>
+  <div id="collect">
+    <div class="heade">
+        <h1>
+          <span>访视期:10位</span>
+          <span>已超窗:12位</span>
+        </h1>
+        <div class="form">
+            <input type="text" placeholder="受试者名或缩写">  
+            <input type="text" placeholder="受试者手机号">
+            <div class="button">查询</div>
+        </div>
+    </div>
+
+     <div class="section1">
+       <ul>
+         <li>
+           <div>
+              <div class="mui-cell">
+                <div class="mui-laber">受试者名:</div>
+                <div class="mui-body">MINI测试</div>
+              </div>
+              <div class="mui-cell">
+                <div class="mui-laber">进度:</div>
+                <div class="mui-body">100%</div>
+              </div>
+              <div class="mui-cell">
+                <div class="mui-laber">基准时间:</div>
+                <div class="mui-body">2019-08-25</div>
+              </div>
+           </div>
+           <div class="foot">
+              <span><img src="./public/img/erweima-list.png"></span>
+              <span><img src="./public/img/rili-list.png"></span>
+           </div>
+         </li>
+
+         <li>
+          <div>
+             <div class="mui-cell">
+               <div class="mui-laber">受试者名:</div>
+               <div class="mui-body">MINI测试</div>
+             </div>
+             <div class="mui-cell">
+               <div class="mui-laber">进度:</div>
+               <div class="mui-body">100%</div>
+             </div>
+             <div class="mui-cell">
+               <div class="mui-laber">基准时间:</div>
+               <div class="mui-body">2019-08-25</div>
+             </div>
+          </div>
+          <div class="foot">
+             <span><img src="./public/img/erweima-list.png"></span>
+          </div>
+        </li>
+
+        <li>
+          <div>
+             <div class="mui-cell">
+               <div class="mui-laber">受试者名:</div>
+               <div class="mui-body">MINI测试</div>
+             </div>
+             <div class="mui-cell">
+               <div class="mui-laber">进度:</div>
+               <div class="mui-body">100%</div>
+             </div>
+             <div class="mui-cell">
+               <div class="mui-laber">基准时间:</div>
+               <div class="mui-body">2019-08-25</div>
+             </div>
+          </div>
+          <div class="foot">
+             <span><img src="./public/img/erweima-list.png"></span>
+             <span><img src="./public/img/rili-list.png"></span>
+          </div>
+        </li>
+
+        <li>
+          <div>
+             <div class="mui-cell">
+               <div class="mui-laber">受试者名:</div>
+               <div class="mui-body">MINI测试</div>
+             </div>
+             <div class="mui-cell">
+               <div class="mui-laber">进度:</div>
+               <div class="mui-body">100%</div>
+             </div>
+             <div class="mui-cell">
+               <div class="mui-laber">基准时间:</div>
+               <div class="mui-body">2019-08-25</div>
+             </div>
+          </div>
+          <div class="foot">
+             <span><img src="./public/img/erweima-list.png"></span>
+             <span><img src="./public/img/rili-list.png"></span>
+          </div>
+        </li>
+         
+
+       </ul>
+
+       <!-- 分页 start  
+        Vm-pagination__item--disabled: 不能点击时的状态
+      -->
+       <div class="Vm_pagination">
+          <div class="Vm_page">
+             <a href="#" class="Vm-pagination__item Vm-pagination__prev Vm-pagination__item--disabled">上一页</a>
+             <a href="#" class="Vm-pagination__item Vm-pagination__item--active">1</a>
+             <a href="#" class="Vm-pagination__item">2</a>
+             <a href="#" class="Vm-pagination__item">3</a>
+             <a href="#" class="Vm-pagination__item">4</a>
+             <a href="#" class="Vm-pagination__item">...</a>
+             <a href="#" class="Vm-pagination__item Vm-pagination__next">下一页</a>
+          </div>
+          <div class="Vm-msg">显示第 1 到第 5 条记录，总共 89 条记录</div>
+       </div>
+       <!-- 分页 end -->
+
+
+     </div>
+
+  </div>
+  <script>
+    $(function(){
+      $(".dropdown-menu__title").on('click',function(){
+        $(".Vm-dropdown-item").fadeToggle();
+        $(".Vm-dropdown-item__content").slideDown();
+      })
+      $(".Vm-overlay,.Vm-btn").on('click',function(){
+        $(".Vm-dropdown-item").fadeOut();
+      })
+    })
+  </script>
+</body>
+</html>

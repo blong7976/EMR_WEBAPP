@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/iconfont/iconfont.css">
+    <script src="public/js/rem.js"></script>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <title>EMR</title>
+    <style>
+    </style>
+</head>
+<body>
+  <div id="JPP">
+   <div class="mui-bar-nav ">
+      <a href="javascript:;" class="mui-control-item active">基本信息</a>
+      <a href="javascript:;" class="mui-control-item">知情同意书</a>
+      <a href="javascript:;" class="mui-control-item">筛查CRF</a>
+      <a href="javascript:;" class="mui-control-item">入组采集</a>
+      <a href="javascript:;" class="mui-control-item">流程外</a>
+   </div>
+
+   <div class="JPP-Case-Details">
+      <div class="body">
+        <div class="info">
+           <div class="lt">
+             <img src="./public/img/touxiang.png" alt="">
+           </div>
+           <div class="lr">
+             <div class="mui-cell">
+               <div class="mui-laber">姓名：</div>
+               <div class="mui-body">冷雨夜</div>
+             </div>
+             <div class="mui-cell">
+              <div class="mui-laber">姓名缩写：</div>
+              <div class="mui-body">冷雨夜</div>
+            </div>
+            <div class="mui-cell">
+              <div class="mui-laber">性别：</div>
+              <div class="mui-body">女</div>
+            </div>
+            <div class="mui-cell">
+              <div class="mui-laber">电话号：</div>
+              <div class="mui-body">15102988385</div>
+            </div>
+           </div>
+        </div> 
+        <div class="list">
+          <div class="mui-cell">
+            <div class="mui-laber">民族：</div>
+            <div class="mui-body">汉</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">出生日期：</div>
+            <div class="mui-body">1990-03-18</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">病历号：</div>
+            <div class="mui-body">201908240058</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">邮箱：</div>
+            <div class="mui-body">2456399912@qq.com</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">疾病种类：</div>
+            <div class="mui-body">脑器质性精神障碍</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">现住址：</div>
+            <div class="mui-body">陕西省西安市韩森寨街道新东尚东区</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">详细地址：</div>
+            <div class="mui-body">陕西省西安市韩森寨街道新东尚东区</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">现在病史：</div>
+            <div class="mui-body">此处的个人描述内容，此处的个人描述内容此处的个人描述内容此处的个人描述内容，此处的个人描述内容此处的个人描述内容...</div>
+          </div>
+          <div class="mui-cell">
+            <div class="mui-laber">诊断：</div>
+            <div class="mui-body">此处是诊断内容此处是诊断内容此处是诊断内容此处是诊断内容此处是诊断内容此处是诊断内容...</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    $(function(){
+      $(".mui-bar-nav").on('click','.mui-control-item',function(){
+        $(".mui-bar-nav .mui-control-item").removeClass('active');
+        $(this).addClass('active')
+      })
+    })
+  </script>
+</body>
+</html>
