@@ -475,13 +475,14 @@ html,body{
     overflow: hidden;
 }
 
-/* 今日访视 */
+/* body>div padding */
 #Interview,
 #Medicalrecords .section1,
-#collect{
+#emergency .section2{
     padding: .3rem .2rem;
     box-sizing: border-box
 }
+/* 今日访视 */
 #Interview .section1 ul,
 #Medicalrecords .section1 ul,
 #collect .section1 ul{
@@ -649,6 +650,8 @@ html,body{
     width: 100%;
     border-top: 1px solid #ebedf0;
     background: #fff;
+    max-height: 60vh;
+    overflow-y: scroll;
 }
 .Vm-dropdown-item__content .Vm-dropdown-item__option{
     background: #fff;
@@ -800,6 +803,86 @@ html,body{
     margin-bottom: .3rem;
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.07);
     border-radius: 8px;
-    height: 2.4rem;
+    height: 2.38rem;
+    overflow: hidden;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+#clinical .section2 ul li .icon{
+    width: 2.3rem;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover !important;
+    background-repeat: no-repeat !important; 
+}
+#clinical .section2 ul li .content{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1;
+    padding: 0 .2rem;
+    box-sizing: border-box;
+}
+#clinical .section2 ul li .content .mui-laber{
+    width: 1.1rem;
+}
+#clinical .section2 ul li .content .mui-body{
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
 }
+#clinical .section2 ul li .handel{
+    width: 1.2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#clinical .section2 ul li .handel a{
+    display: block !important;
+    text-align: center;
+    line-height: .45rem;
+    font-size: .22rem;
+    color: #999;
+    width: .88rem;
+    height: .45rem;
+    border: 1px solid rgb( 203, 203, 203 );
+    border-radius: 4px;
+    margin-bottom: .2rem;
+}
+#clinical .section2 ul li .handel a:last-child{margin-bottom: 0}
+  
+/* emergency */
+#emergency .section1 ul li{
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    padding: .3rem .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#emergency .section1 ul li .lt {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1;
+    margin-right: 0.3rem;
+}
+#emergency .section1 ul li .lt .mui-laber{
+    width: .55rem;
+}
+#emergency .section1 ul li .rt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#emergency .section1 ul li .rt span{
+    padding: .18rem;
+    background: #00a7c1;
+    color: #fff;
+    font-size: .24rem;
+    border-radius: 4px;
+}
+#emergency .section1 ul li .rt span.dislaber{background: #999;}
