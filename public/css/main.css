@@ -8,125 +8,12 @@ html,body{
 	cursor: url('../image/menghuan.ico'), auto;
 }
 /* 全局样式 */
-#Vm_header{
-    position: fixed;
-    z-index: 10;
-    right: 0;
-    left: 0;
-    height: .88rem;
-    padding-right: .2rem;
-    padding-left: .2rem;
-    border-bottom: 0;
-    background-color: #f7f7f7;
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,.85);
-    box-shadow: 0 0 1px rgba(0,0,0,.85);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-box-shadow: 0 1px 6px #ccc;
-    box-shadow: 0 1px 6px #ccc;
-}
-#Vm_header .mui-title{
-    right: 2rem;
-    left: 2rem;
-    display: inline-block;
-    overflow: hidden;
-    width: auto;
-    margin: 0;
-    text-overflow: ellipsis;
-    font-size: .34rem;
-    font-weight: 500;
-    line-height: .88rem;
-    position: absolute;
-    display: block;
-    margin: 0 -10px;
-    padding: 0;
-    text-align: center;
-    white-space: nowrap;
-    color: #000;
-}
-#Vm_header .mui-pull-left{
-    float: left;
-    font-size: .32rem;
-    line-height: .88rem;
-    text-align: center;
-    display: flex;
-}
-#Vm_header .mui-pull-left .mui-icon-left-nav{
-    padding-right: .1rem;
-    font-size: .56rem;
-}
-#Vm_header .mui-pull-right{
-    float: right;
-    margin-right: -.1rem;
-    margin-left: -.1rem;
-    padding-right: .1rem;
-    padding-left: .1rem;
-    font-size: .48rem;
-    position: relative;
-    z-index: 20;
-    line-height: .88rem;
-}
+
 .mui-content{
-    padding: .88rem 0 .98rem;
+    padding: .3rem;
 }
-#Vm_footer{
-    position: fixed;
-    z-index: 10;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: table;
-    width: 100%;
-    height: .98rem;
-    padding: 0;
-    table-layout: fixed;
-    border-top: 0;
-    border-bottom: 0;
-    background-color: #f7f7f7;
-    -webkit-box-shadow: 0 0 2px #ccc;
-    box-shadow: 0 0 2px #ccc;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-#Vm_footer .tab-item{
-    display: table-cell;
-    overflow: hidden;
-    width: 1%;
-    height: .98rem;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #929292;
-}
-#Vm_footer .tab-item .tab-label{
-    font-size: .24rem;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-#Vm_footer .tab-item .tab-icon{
-    font-family: Muiicons;
-    font-weight: 400;
-    font-style: normal;
-    display: block;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    z-index: 20;
-    width: .48rem;
-    height: .48rem;
-    padding-top: .05rem;
-    padding-bottom: .02rem;
-    margin: 0 auto;
-    font-size: .4rem;
-    position: relative;
-    z-index: 20;
-}
-#Vm_footer .tab-item.mui-active .tab-icon,
-#Vm_footer .tab-item.mui-active .tab-label{
-   color: #007aff 
-}
+
+
 .Vm-btn{
     margin:1rem .2rem .4rem;
     text-align: center;
@@ -794,6 +681,7 @@ html,body{
     width: 2.78rem;
     background-color: #fff;
 }
+#Doctororder .form input{text-align: center;font-size: .26rem}
 #collect .heade .form .button,
 #screening .form .button,
 #Doctororder .form .button{
@@ -1000,15 +888,22 @@ html,body{
 .goback_date{
     line-height: 24px;
     width: 60px;
-    color: rgb(255, 84, 0);
+    color: #fff;
     position: absolute;
     right: 15px;
     text-align: center;
     font-size: 14px;
     cursor: pointer;
-    top: 10px;
-    border: 1px solid rgb(255, 84, 0);
+    top: 13px;
+    border: 1px solid #00a7c1;
+    background-color: #00a7c1;
+    border-radius: 13px;
 }
 .goback_date{
     left: 15px;
+    background: #999;
+    border-color: #999;
+}
+#firstSelect{
+    display: flex;align-items: center;
 }

@@ -42,7 +42,11 @@ body td {
 }
 
 .dateZone td {
-    background: #f4f3f8
+    background: #f4f3f8;
+    font-size: .28rem;
+}
+.headerTip{
+    font-size: .32rem;
 }
 
 .tbody td {
@@ -66,11 +70,13 @@ body td {
 .tbody .ny1 {
     width: 100%;
     text-align: center;
-    padding: 5px 0
+    padding: 10px 0;
+    font-size: .28rem;
 }
 
 .dateTable td {
-    width: 14.2%
+    width: 14.2%;
+    font-size: .28rem;
 }
 
 .dateTable .rz {
