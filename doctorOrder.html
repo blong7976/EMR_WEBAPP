@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="public/date/calendar.css">
+    <script src="public/js/rem.js"></script>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="public/date/date.js"></script>
+    
+    <title>预约管理</title>
+    <style>
+    </style>
+</head>
+<body>
+  <div id="Doctororder">
+    <div class="calendar"></div>
+    <div class="form" id="firstSelect">
+          <div class="input"><input type="text" placeholder="开始时间" id="startDate"></div>~  
+          <div class="input"><input type="text" placeholder="结束时间" id="endDate"></div>
+          <div class="button">今日</div>
+    </div>
+    
+    <div class="section1">
+      <ul>
+        <li>
+          <div class="lt">
+            <div class="mui-cell">
+              <div class="mui-laber">时间:</div>
+              <div class="mui-body">2019-07-28  11:26:15</div>
+            </div>
+            <div class="mui-cell">
+              <div class="mui-laber">病患:</div>
+              <div class="mui-body">病患一</div>
+            </div>
+            <div class="mui-cell">
+              <div class="mui-laber">备注:</div>
+              <div class="mui-body">7月28号来北京大学第一医...</div>
+            </div>
+          </div>
+          <div class="rt">
+             <span>已完成</span> 
+          </div>
+        </li>
+
+
+        <li>
+            <div class="lt">
+              <div class="mui-cell">
+                <div class="mui-laber">时间:</div>
+                <div class="mui-body">2019-07-28  11:26:15</div>
+              </div>
+              <div class="mui-cell">
+                <div class="mui-laber">病患:</div>
+                <div class="mui-body">病患一</div>
+              </div>
+              <div class="mui-cell">
+                <div class="mui-laber">备注:</div>
+                <div class="mui-body">7月28号来北京大学第一医...</div>
+              </div>
+            </div>
+            <div class="rt">
+               <span class="danger">取消预约</span> 
+            </div>
+          </li>
+
+          <li>
+              <div class="lt">
+                <div class="mui-cell">
+                  <div class="mui-laber">时间:</div>
+                  <div class="mui-body">2019-07-28  11:26:15</div>
+                </div>
+                <div class="mui-cell">
+                  <div class="mui-laber">病患:</div>
+                  <div class="mui-body">病患一</div>
+                </div>
+                <div class="mui-cell">
+                  <div class="mui-laber">备注:</div>
+                  <div class="mui-body">7月28号来北京大学第一医...</div>
+                </div>
+              </div>
+              <div class="rt">
+                 <span class="dislaber">等待中</span> 
+              </div>
+          </li>
+
+      </ul>
+    </div>
+
+
+     <div class="section2">
+       <!-- 分页 start  
+        Vm-pagination__item--disabled: 不能点击时的状态
+      -->
+       <div class="Vm_pagination">
+          <div class="Vm_page">
+             <a href="#" class="Vm-pagination__item Vm-pagination__prev Vm-pagination__item--disabled">上一页</a>
+             <a href="#" class="Vm-pagination__item Vm-pagination__item--active">1</a>
+             <a href="#" class="Vm-pagination__item">2</a>
+             <a href="#" class="Vm-pagination__item">3</a>
+             <a href="#" class="Vm-pagination__item">4</a>
+             <a href="#" class="Vm-pagination__item">...</a>
+             <a href="#" class="Vm-pagination__item Vm-pagination__next">下一页</a>
+          </div>
+          <div class="Vm-msg">显示第 1 到第 5 条记录，总共 89 条记录</div>
+       </div>
+       <!-- 分页 end -->
+
+
+     </div>
+
+  </div>
+  <script>
+     $(function(){
+                $('#firstSelect').calendarSwitch({
+                    selectors : {
+                        sections : ".calendar"
+                    },
+                    index : 3,      //展示的月份个数
+                    animateFunction : "toggle",  //动画效果
+                    controlDay:false,//知否控制在daysnumber天之内，这个数值的设置前提是总显示天数大于90天
+                    daysnumber : "60",     //控制天数
+                    comeColor : "#66CCFF",       //开始颜色
+                    outColor : "#FF0033",      //结束颜色
+                    comeoutColor : "#00a7c1",        //开始和结束之间的颜色
+                    callback :function(){
+                        var st = $('#startDate').val();
+                        var en = $('#endDate').val();
+                        console.log('开始：'+$("#startDate").val().replace(/[^0-9]/ig, ""))
+                        console.log('结束：'+$("#endDate").val().replace(/[^0-9]/ig, ""))
+                    },   //回调函数
+                    comfireBtn:'.comfire'//确定按钮的class或者id
+                });
+
+                // 此处一下可以省略，默认日期的开始结束时间是今天和明天
+                var b=new Date();
+                //b.setDate(a.getDate()+1)
+                var ye=b.getFullYear();
+                var mo=b.getMonth()+1;
+                var da=b.getDate();
+                  $('#startDate').val(ye+'-'+mo+'-'+da); 
+                b=new Date(b.getTime()+24*3600*1000);
+                var ye=b.getFullYear();
+                var mo=b.getMonth()+1;
+                var da=b.getDate();
+                $('#endDate').val(ye+'-'+mo+'-'+da); 
+                $(".goback").click(function(){
+                  $("#startDate").val('');
+                  $("#endDate").val('');
+                  $(".calendar").toggle();
+                })
+            });
+  </script>
+</body>
+</html>
