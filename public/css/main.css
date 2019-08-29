@@ -368,6 +368,7 @@ html,body{
 #collect,
 #screening,
 #emergency .section2,
+#access,
 #Doctororder .section2{
     padding: .3rem .2rem;
     box-sizing: border-box
@@ -939,4 +940,50 @@ html,body{
     background: red;
     border-radius: 50%;
     box-shadow: 0 0 12px rgba(202, 135, 199, 0.8);
+}
+/* #access */
+#access table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: '微软雅黑', Arial;
+    font-weight: inherit;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    table-layout:fixed;
+}
+#access table td,
+#access table th{
+    width: auto;
+    position: relative;
+    border: 1px solid #ccc;
+    height: 40px;
+    font-size: 14px;
+    text-align: left;
+    text-align: center;
+    color: #666;
+    padding: .1rem;
+    position: relative;
+}
+#access table th{
+    color: #333;
+    background-color: #e4e4e4;
+}
+#access table td:first-child{
+    padding-right: .7rem;
+}
+#access table td:first-child .btn{
+    padding: .1rem;
+    background: #ff8b3c;
+    color: #fff;
+    position: absolute;
+    right: .1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
 }
