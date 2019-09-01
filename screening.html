@@ -22,7 +22,7 @@
           <div class="button">查询</div>
       </div>
 
-      <div class="created">
+      <div class="created" >
           新建码
       </div>
       <div class="clear"></div>
@@ -243,13 +243,73 @@
           <div class="Vm-msg">显示第 1 到第 5 条记录，总共 89 条记录</div>
        </div>
        <!-- 分页 end -->
-
-
      </div>
+
+     <div class="modal" id="Qrcode">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close"><span>×</span></button>
+              <h4 class="modal-title">二维码新建--随机码:2294</h4>
+            </div>
+            <div class="modal-body">
+               <div class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">选择分组：</label>
+                    <div class="col-sm-8">
+                      <select class="form-control">
+                        <option>分组A</option>
+                        <option>分组B</option>
+                        <option>分组C</option>
+                        <option>分组D</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">选择模式：</label>
+                    <div class="col-sm-8">
+                      <select class="form-control">
+                        <option>患者</option>
+                        <option>医生</option>
+                      </select>
+                    </div>
+                  </div>
+               </div>
+               <div class="codelist">
+                  <div class="item">
+                    <div class="code"  style="width: 3rem;height:3rem;padding: .2rem">
+                      <img src="./public/img/ewm.png">
+                    </div>
+                    <button class="btn btn-block btn-success">点击生成或刷新唯一二维码</button>
+                    <button class="btn btn-block btn-text" style="margin-top: .2rem">点击进入</button>
+                  </div>
+               </div> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default closeBtn">关闭</button>
+            </div>
+         </div>
+      </div>
+  </div>
+  <div class="modal-backdrop"></div>
 
   </div>
   <script>
+    $(function(){
+      $(".created").on('click',function(){
+         $('body').addClass('modal-open')
+         $("#Qrcode,.modal-backdrop").addClass('fade')
+      })
 
+      function close(){
+        $('body').removeClass('modal-open')
+        $("#Qrcode,.modal-backdrop,.modal").removeClass('fade')
+      }
+
+      $('.closeBtn,.close,.saveBtn').on('click',function(){
+        close()
+      })
+    })
   </script>
 </body>
 </html>

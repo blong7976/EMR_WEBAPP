@@ -66,7 +66,14 @@
        <!-- 分页 end -->
   </div>
   <script>
-
+    $(function(){
+      $("#access").on('click','tr td:first-child .btn',function(){
+        window.location.href="screening.html"
+      })
+      $("#access").on('click','tr td:last-child',function(){
+        window.location.href="interview.html"
+      })
+    })
   </script>
 </body>
 </html>

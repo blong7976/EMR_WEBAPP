@@ -173,12 +173,62 @@
        </div>
        <!-- 分页 end -->
 
-
      </div>
+
+    <div class="modal" id="Qrcode">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">受试者标识：0521-00129</h4>
+              </div>
+              <div class="modal-body">
+                 <div class="codelist">
+                    <div class="item">
+                      <div class="code">
+                        <img src="./public/img/ewm.png">
+                      </div>
+                      <h6>自动积分</h6>
+                    </div>
+                    <div class="item">
+                      <div class="code">
+                        <img src="./public/img/ewm.png">
+                      </div>
+                      <h6>病人用</h6>
+                    </div>
+                    <div class="item">
+                      <div class="code">
+                        <img src="./public/img/ewm.png">
+                      </div>
+                      <h6>医生用</h6>
+                    </div>
+                 </div> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default closeBtn">关闭</button>
+              </div>
+           </div>
+        </div>
+    </div>
+    <div class="modal-backdrop"></div>
 
   </div>
   <script>
+    $(function(){
+      $("#Interview .section1").on('click','ul li .ewm',function(){
+         $('body').addClass('modal-open')
+         $("#Qrcode,.modal-backdrop").addClass('fade')
+      })
 
+      function close(){
+        $('body').removeClass('modal-open')
+        $("#Qrcode,.modal-backdrop,.modal").removeClass('fade')
+      }
+
+      $('.closeBtn,.close,.saveBtn').on('click',function(){
+        close()
+      })
+    })
   </script>
 </body>
 </html>

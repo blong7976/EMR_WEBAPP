@@ -46,8 +46,8 @@
               </div>
            </div>
            <div class="foot">
-              <span><img src="./public/img/erweima-list.png"></span>
-              <span><img src="./public/img/rili-list.png"></span>
+              <span class="qrcode"><img src="./public/img/erweima-list.png"></span>
+              <span class="date"><img src="./public/img/rili-list.png"></span>
            </div>
          </li>
 
@@ -67,7 +67,7 @@
              </div>
           </div>
           <div class="foot">
-             <span><img src="./public/img/erweima-list.png"></span>
+             <span class="qrcode"><img src="./public/img/erweima-list.png"></span>
           </div>
         </li>
 
@@ -87,8 +87,8 @@
              </div>
           </div>
           <div class="foot">
-             <span><img src="./public/img/erweima-list.png"></span>
-             <span><img src="./public/img/rili-list.png"></span>
+             <span class="qrcode"><img src="./public/img/erweima-list.png"></span>
+             <span class="date"><img src="./public/img/rili-list.png"></span>
           </div>
         </li>
 
@@ -108,8 +108,8 @@
              </div>
           </div>
           <div class="foot">
-             <span><img src="./public/img/erweima-list.png"></span>
-             <span><img src="./public/img/rili-list.png"></span>
+             <span class="qrcode"><img src="./public/img/erweima-list.png"></span>
+             <span class="date"><img src="./public/img/rili-list.png"></span>
           </div>
         </li>
          
@@ -208,6 +208,36 @@
         </div>
     </div>
     
+    <div class="modal" id="Qrcode">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">受试者标识：0521-00129</h4>
+              </div>
+              <div class="modal-body">
+                 <div class="codelist">
+                    <div class="item">
+                      <div class="code">
+                        <img src="./public/img/ewm.png">
+                      </div>
+                      <h6>病人用</h6>
+                    </div>
+                    <div class="item">
+                      <div class="code">
+                        <img src="./public/img/ewm.png">
+                      </div>
+                      <h6>病人用</h6>
+                    </div>
+                 </div> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default closeBtn">关闭</button>
+              </div>
+           </div>
+        </div>
+    </div>
+
     <div class="modal-backdrop"></div>
     <!-- modal end -->
 
@@ -222,12 +252,16 @@
       $(".Vm-overlay,.Vm-btn").on('click',function(){
         $(".Vm-dropdown-item").fadeOut();
       })
+
+      $("#collect").on('click','.heade h1 span',function(){
+        window.location.href="interview.html"
+      })
     })
 
 
     $(function(){
       // 基准时间
-      $("#collect .section1").on('click','ul li>div.foot span:last-child',function(){
+      $("#collect .section1").on('click','ul li>div.foot span.date',function(){
          $('body').addClass('modal-open')
          $("#detaile,.modal-backdrop").addClass('fade')
       })
@@ -247,6 +281,11 @@
         $("#detaile").removeClass('fade')
       })
 
+      // 二维码
+      $("#collect .section1").on('click','ul li>div.foot span.qrcode',function(){
+         $('body').addClass('modal-open')
+         $("#Qrcode,.modal-backdrop").addClass('fade')
+      })
     })
   </script>
 </body>
