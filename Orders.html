@@ -23,7 +23,7 @@
         <div id="firstSelect">
           <input type="text" placeholder="开始时间" id="startDate">~  <input type="text" placeholder="结束时间" id="endDate">
         </div>
-        <div class="button">+</div>
+        <div class="button add">+</div>
     </div>
     
     <div class="section1">
@@ -102,6 +102,67 @@
 
      </div>
 
+    <!-- modal begin -->
+    <div class="modal" id="detaile">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">预约详情
+                    <img src="./public/img/yuyue@2x.png">
+                    <img src="./public/img/butongg@2x.png">
+                    <img src="./public/img/tongg@2x.png">
+                </h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="2019-08-28" readonly>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="12" placeholder="7月28号来北京大学第一医院皮肤科就诊， 携带病历和B超照片。" readonly></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer flex">
+                <button type="button" class="btn btn-default closeBtn">取消</button>
+                <button type="button" class="btn btn-primary saveBtn">完成</button>
+              </div>
+           </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="add">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">添加预约</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <input type="date" class="form-control" placeholder="2019-08-28" >
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="12" placeholder="请填写预约内容"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer flex">
+                <button type="button" class="btn btn-default closeBtn">取消</button>
+                <button type="button" class="btn btn-primary saveBtn">完成</button>
+              </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop"></div>
+    <!-- modal end -->
+
+
+
+
   </div>
   <script>
      $(function(){
@@ -142,7 +203,29 @@
                   $("#endDate").val('');
                   $(".calendar").toggle();
                 })
-            });
+    });
+
+    $(function(){
+      //  1:显示详情弹窗
+       $(".section1").on('click','ul li',function(){
+         $('body').addClass('modal-open')
+         $("#detaile,.modal-backdrop").addClass('fade')
+       })
+      function close(){
+        $('body').removeClass('modal-open')
+         $("#detaile,.modal-backdrop,#add").removeClass('fade')
+      }
+      $('.closeBtn,.close,.saveBtn').on('click',function(){
+        close()
+      })
+
+      // 添加预约
+      $(".add").on('click',function(){
+        $('body').addClass('modal-open')
+         $("#add,.modal-backdrop").addClass('fade')
+      })
+
+     })
   </script>
 </body>
 </html>

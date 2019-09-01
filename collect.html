@@ -136,6 +136,82 @@
 
      </div>
 
+
+    <!-- modal begin -->
+    <div class="modal" id="detaile">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">基准时间
+                </h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <input type="date" class="form-control" placeholder="2019-08-28">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer ">
+                <button type="button" class="btn btn-info openBtn" style="float: left">本次访视期限</button>
+                <button type="button" class="btn btn-default closeBtn">取消</button>
+                <button type="button" class="btn btn-primary saveBtn">修改</button>
+              </div>
+           </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="deadline">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">病例名-本次访视期限</h4>
+              </div>
+              <div class="modal-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>阶段名称</th>
+                      <th>访视开始时间</th>
+                      <th>访视结束时间</th>
+                      <th>状态</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">阶段1</th>
+                      <td>2019-07-19</td>
+                      <td>2019-12-19</td>
+                      <td>进行中</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">等于6-设计</th>
+                      <td>2019-07-19</td>
+                      <td>2019-12-19</td>
+                      <td>进行中</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"> 大于等于3</th>
+                      <td>2019-07-19</td>
+                      <td>2019-12-19</td>
+                      <td>进行中</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default closeBtn">关闭</button>
+              </div>
+           </div>
+        </div>
+    </div>
+    
+    <div class="modal-backdrop"></div>
+    <!-- modal end -->
+
+
   </div>
   <script>
     $(function(){
@@ -146,6 +222,31 @@
       $(".Vm-overlay,.Vm-btn").on('click',function(){
         $(".Vm-dropdown-item").fadeOut();
       })
+    })
+
+
+    $(function(){
+      // 基准时间
+      $("#collect .section1").on('click','ul li>div.foot span:last-child',function(){
+         $('body').addClass('modal-open')
+         $("#detaile,.modal-backdrop").addClass('fade')
+      })
+
+      function close(){
+        $('body').removeClass('modal-open')
+        $("#detaile,.modal-backdrop,#add,.modal").removeClass('fade')
+      }
+      $('.closeBtn,.close,.saveBtn').on('click',function(){
+        close()
+      })
+
+       // 本次访视期限
+
+      $(".openBtn").on('click',function(){
+        $("#deadline").addClass('fade')
+        $("#detaile").removeClass('fade')
+      })
+
     })
   </script>
 </body>

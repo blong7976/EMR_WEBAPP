@@ -122,9 +122,49 @@
 
      </div>
 
+
+         <!-- modal begin -->
+    <div class="modal" id="detaile">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close"><span>×</span></button>
+                <h4 class="modal-title">诊断方式</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                      <button type="button" class="btn btn-primary" style="width: 100%">首次诊断</button>
+                  </div>
+                  <div class="form-group">
+                      <button type="button" class="btn btn-primary" style="width: 100%">复诊</button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default closeBtn">关闭</button>
+              </div>
+           </div>
+        </div>
+    </div>
+    <div class="modal-backdrop"></div>
+    <!-- modal end -->
+
   </div>
   <script>
-
+    $(function(){
+      $(".section1").on('click','.grid .grid-item',function(){
+         $('body').addClass('modal-open')
+         $("#detaile,.modal-backdrop").addClass('fade')
+       })
+      function close(){
+        $('body').removeClass('modal-open')
+         $("#detaile,.modal-backdrop,#add").removeClass('fade')
+      }
+      $('.closeBtn,.close,.saveBtn').on('click',function(){
+        close()
+      })
+    })
   </script>
 </body>
 </html>
