@@ -582,7 +582,13 @@ textarea.form-control {
     left: -.1rem;
     top: 0;
 }
-
+.van-ellipsis{
+	max-width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 /* JPP */
 .mui-bar-nav{
     box-sizing: border-box;
@@ -774,18 +780,22 @@ textarea.form-control {
     
 }
 .dropdown-menu__title{
-    position: relative;
+	position: relative;
     box-sizing: border-box;
-    max-width: 100%;
-    padding: 0 8px;
+    padding: 0 12px;
     color: #00a7c1;
     font-size: .3rem;
     line-height: .36rem;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .Vm_dropdown .dropdown-menu__title::after {
     position: absolute;
     top: 50%;
-    right: -4px;
+    right: 0;
     margin-top: -5px;
     border: 3px solid;
     border-color: transparent transparent currentColor currentColor;

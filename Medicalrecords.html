@@ -18,19 +18,19 @@
   <div id="Medicalrecords">
     <div class="Vm_dropdown">
         <div class="dropdown-menu__title">
-            <div class="van-ellipsis">选择</div>
+            选择
         </div>
         <div class="Vm-dropdown-item" style="top: .88rem">
           <div class="Vm-overlay"></div>
           <div class="Vm-dropdown-item__content">
              <div class="Vm-dropdown-item__option">
-               <input placeholder="病历号" />
+               <input placeholder="病历号" id="input1" />
              </div>
              <div class="Vm-dropdown-item__option">
-              <input placeholder="病历号" />
+              <input placeholder="病历号" id="input2" />
              </div>
              <div class="Vm-dropdown-item__option">
-              <input placeholder="手机号" />
+              <input placeholder="手机号" id="input3" maxlength="11" />
              </div>
              <div class="Vm-btn">查询</div>
           </div>
@@ -151,6 +151,23 @@
       })
       $(".Vm-overlay,.Vm-btn").on('click',function(){
         $(".Vm-dropdown-item").fadeOut();
+      })
+
+
+      $(".Vm-btn").click(function(){
+        var inputVal1 = $("#input1").val()
+        var inputVal2 = $("#input2").val()
+        var inputVal3 = $("#input3").val()
+        var $html='';
+        if(inputVal1 && inputVal2 && inputVal3){
+          $html=inputVal1+','+inputVal2+','+inputVal3
+        }else{
+          $html="选择"
+        }
+        $(".dropdown-menu__title").html($html)
+        $("#input1").val('')
+        $("#input2").val('')
+        $("#input3").val('')
       })
     })
   </script>
